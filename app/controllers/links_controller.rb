@@ -4,7 +4,7 @@ class LinksController < ApplicationController
   end
 
   def new
-    @link = Link.new
+    @link = current_user.links.build
   end
 
   def create
