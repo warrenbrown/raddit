@@ -11,4 +11,14 @@ RSpec.feature 'Users can create links' do
     expect(page).to have_content 'Link has been created.'
 
   end
+
+  scenario 'with invalid attributes' do
+    visit '/'
+
+    click_link 'New Link'
+
+    click_button 'Create Link'
+
+    expect(page).to have_content 'Link has not been created.'
+  end
 end
