@@ -1,9 +1,13 @@
-<h1>Links</h1>
+<% @links.each do |link| %>
+  <div class="link row clearfix">
+    <h2>
+      <%= link_to link.title, link %><br>
+    </h2>
 
-  <% @links.each do |link| %>
-    <h2><%= link_to link.title, link %></h2>
-  <% end %>
+    <div class="btn-group">
+      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
 
 
-
-<%= link_to 'New Link', new_link_path %>
+    </div>
+  </div>
+<% end %>
