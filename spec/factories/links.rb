@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :link do
-    title "sports"
+    title "txu"
     url  "espn.com"
   end
 end
