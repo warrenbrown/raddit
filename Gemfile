@@ -26,6 +26,7 @@ gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'terminal-notifier-guard', '~> 1.7'
 gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
