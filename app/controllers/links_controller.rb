@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+  before_filter :authenticate_user!, except: [ :index, :show]
   def index
     @links = Link.all
   end
@@ -8,7 +9,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    @link = Link.new(link_params)
+    @link = current_user.links.build(link_params)
 
     if @link.save
       flash[:notice] = 'Link has been created.'
