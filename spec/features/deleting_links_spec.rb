@@ -12,5 +12,4 @@ RSpec.feature 'Users can delete links' do
     expect(page).to have_content 'Link has been deleted.'
     expect(page).to_not have_content 'VSN'
   end
-
 end
